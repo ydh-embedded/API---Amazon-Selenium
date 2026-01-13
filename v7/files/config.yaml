@@ -1,0 +1,52 @@
+# Steuer-Automatisierung - Konfiguration
+# Angepasst für: ~/Dokumente/vsCode/API - Amazon Selenium/v7
+
+# Pfade (relative Pfade für bessere Portabilität)
+paths:
+  # Amazon Download-Verzeichnis (wo Amazon Downloader PDFs speichert)
+  download_dir: ./amazon_downloads
+  
+  # Temporäres Verzeichnis für Verarbeitung
+  temp_dir: ./temp
+  
+  # Basis-Verzeichnis für Steuer-Ordner (Steuer-YYYY/KWXX/)
+  steuer_dir: ./steuer
+  
+  # Log-Verzeichnis
+  log_dir: ./logs
+
+# Amazon Invoice Downloader
+amazon:
+  # Pfad zum amazon_invoice_downloader.py Skript
+  # WICHTIG: Stelle sicher, dass dieses Skript unter diesem Pfad existiert
+  script_path: ./amazon_invoice_downloader.py
+  
+  # Pfad zur config.yaml für Amazon Downloader
+  config_path: ./amazon_config.yaml
+
+# Steuer-Einstellungen
+steuer:
+  # Jahr (wird automatisch ermittelt wenn nicht angegeben)
+  # jahr: 2026
+  
+  # Maximale Dateien pro Ordner (für Übersichtlichkeit)
+  dateien_pro_ordner: 100
+
+# Benachrichtigungen
+notifications:
+  # Telegram
+  telegram:
+    enabled: false  # true = aktiviert, false = deaktiviert
+    
+    # Bot Token von @BotFather
+    # Kann auch via TELEGRAM_BOT_TOKEN Environment-Variable gesetzt werden
+    token: ""
+    
+    # Deine Chat ID
+    # Kann auch via TELEGRAM_CHAT_ID Environment-Variable gesetzt werden
+    chat_id: ""
+
+# Logging
+logging:
+  level: INFO  # DEBUG, INFO, WARNING, ERROR
+  to_file: true  # Logs in Datei schreiben
