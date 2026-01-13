@@ -125,35 +125,6 @@ steuer/
 - `XX`: Kalenderwoche (01-53)
 - `BETRAG`: Betrag mit Komma (z.B. 0042,50)
 
-## Troubleshooting
-
-### "Config-Datei nicht gefunden"
-```bash
-cp config.yaml.example config.yaml
-nano config.yaml
-```
-
-### "Python3 nicht gefunden"
-```bash
-# Ubuntu/Debian
-sudo apt-get install python3
-
-# macOS
-brew install python3
-```
-
-### "Module fehlen"
-```bash
-pip install -r requirements.txt
-```
-
-### "Amazon Downloader Skript nicht gefunden"
-Stelle sicher, dass `amazon_invoice_downloader.py` unter dem konfigurierten Pfad existiert.
-
-### "Keine Beträge erkannt"
-- Prüfe mit `python3 main.py --check`
-- Manche PDF-Formate werden möglicherweise nicht erkannt
-- Manuelle Nachbearbeitung erforderlich
 
 ## Logs
 
@@ -184,24 +155,12 @@ grep ERROR logs/automation_*.log
 - Amazon Download: Abhängig von Anzahl der Rechnungen
 - Gesamtlauf: ~30-60s für 50 Rechnungen
 
-## Sicherheit
-
-- ⚠️ Speichere Telegram-Credentials nicht in `config.yaml`
-- ✅ Nutze Environment-Variablen: `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`
-- ✅ Relative Pfade verwenden (portabel)
 
 ## Lizenz
 
 Privat
 
-## Support
-
-Für Probleme:
-1. Prüfe die Logs: `tail -f logs/automation_*.log`
-2. Führe Setup erneut aus: `bash setup.sh`
-3. Prüfe die Konfiguration: `nano config.yaml`
-^
 ---
 
-**Version:** 2.0 (Repariert und optimiert)  
+**Version:** 7.0 (Repariert und optimiert)  
 **Letztes Update:** Januar 2026
