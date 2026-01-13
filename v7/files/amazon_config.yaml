@@ -4,8 +4,8 @@
 browser:
   # Browser-Auswahl und Pfad
   # Für Brave:
-  brave_path: /usr/bin/brave
-  
+  # brave_path: /usr/bin/brave
+  brave_path: /usr/bin/chromium
   
   # Für Chrome (Alternative):
   # brave_path: /usr/bin/google-chrome

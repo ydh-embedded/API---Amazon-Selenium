@@ -64,8 +64,9 @@ class AmazonInvoiceDownloader:
         
         # Chrome Service (nutzt system chromedriver)
         # self.driver = webdriver.Chrome(options=options) alte Variante
-        from selenium.webdriver.chrome.service import Service
+        # ✅ NEU (mit webdriver-manager)
         from webdriver_manager.chrome import ChromeDriverManager
+        from selenium.webdriver.chrome.service import Service
 
         service = Service(ChromeDriverManager().install())
         self.driver = webdriver.Chrome(service=service, options=options)

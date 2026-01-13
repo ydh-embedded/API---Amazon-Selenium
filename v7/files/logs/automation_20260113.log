@@ -256,3 +256,431 @@ Stacktrace:
 2026-01-13 17:41:16 - INFO - Dauer:                0s
 2026-01-13 17:41:16 - INFO - ============================================================
 2026-01-13 17:41:16 - INFO - ✓ Steuer-Automatisierung abgeschlossen
+2026-01-13 17:52:34 - INFO - Steuer-Automatisierung initialisiert
+2026-01-13 17:52:34 - INFO - 🚀 Steuer-Automatisierung gestartet
+2026-01-13 17:52:34 - INFO - ============================================================
+2026-01-13 17:52:34 - INFO - SCHRITT 1: Amazon Rechnungen herunterladen
+2026-01-13 17:52:34 - INFO - ============================================================
+2026-01-13 17:52:34 - INFO - Starte Amazon Download...
+2026-01-13 17:52:48 - ERROR - Amazon Download fehlgeschlagen: Traceback (most recent call last):
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/v7/files/amazon_invoice_downloader.py", line 294, in <module>
+    main()
+    ~~~~^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/v7/files/amazon_invoice_downloader.py", line 291, in main
+    downloader.download_all(year=args.year)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/v7/files/amazon_invoice_downloader.py", line 201, in download_all
+    self.setup_driver()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/v7/files/amazon_invoice_downloader.py", line 71, in setup_driver
+    self.driver = webdriver.Chrome(service=service, options=options)
+                  ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/chrome/webdriver.py", line 46, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        browser_name=DesiredCapabilities.CHROME["browserName"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/chromium/webdriver.py", line 67, in __init__
+    super().__init__(command_executor=executor, options=options)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 257, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 352, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 432, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/brave is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Stacktrace:
+#0 0x55ee598db4e3 <unknown>
+#1 0x55ee5960ac76 <unknown>
+#2 0x55ee59633d78 <unknown>
+#3 0x55ee59630029 <unknown>
+#4 0x55ee5966eccc <unknown>
+#5 0x55ee5966e47f <unknown>
+#6 0x55ee59665de3 <unknown>
+#7 0x55ee5963b2dd <unknown>
+#8 0x55ee5963c34e <unknown>
+#9 0x55ee5989b3e4 <unknown>
+#10 0x55ee5989f3d7 <unknown>
+#11 0x55ee598a9b20 <unknown>
+#12 0x55ee598a0023 <unknown>
+#13 0x55ee5986e1aa <unknown>
+#14 0x55ee598c46b8 <unknown>
+#15 0x55ee598c4847 <unknown>
+#16 0x55ee598d4243 <unknown>
+#17 0x7fa7552a87f6 <unknown>
+
+
+2026-01-13 17:52:48 - ERROR - Amazon Download Fehler: Amazon Download fehlgeschlagen: Traceback (most recent call last):
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/v7/files/amazon_invoice_downloader.py", line 294, in <module>
+    main()
+    ~~~~^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/v7/files/amazon_invoice_downloader.py", line 291, in main
+    downloader.download_all(year=args.year)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/v7/files/amazon_invoice_downloader.py", line 201, in download_all
+    self.setup_driver()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/v7/files/amazon_invoice_downloader.py", line 71, in setup_driver
+    self.driver = webdriver.Chrome(service=service, options=options)
+                  ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/chrome/webdriver.py", line 46, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        browser_name=DesiredCapabilities.CHROME["browserName"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/chromium/webdriver.py", line 67, in __init__
+    super().__init__(command_executor=executor, options=options)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 257, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 352, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 432, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/brave is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Stacktrace:
+#0 0x55ee598db4e3 <unknown>
+#1 0x55ee5960ac76 <unknown>
+#2 0x55ee59633d78 <unknown>
+#3 0x55ee59630029 <unknown>
+#4 0x55ee5966eccc <unknown>
+#5 0x55ee5966e47f <unknown>
+#6 0x55ee59665de3 <unknown>
+#7 0x55ee5963b2dd <unknown>
+#8 0x55ee5963c34e <unknown>
+#9 0x55ee5989b3e4 <unknown>
+#10 0x55ee5989f3d7 <unknown>
+#11 0x55ee598a9b20 <unknown>
+#12 0x55ee598a0023 <unknown>
+#13 0x55ee5986e1aa <unknown>
+#14 0x55ee598c46b8 <unknown>
+#15 0x55ee598c4847 <unknown>
+#16 0x55ee598d4243 <unknown>
+#17 0x7fa7552a87f6 <unknown>
+
+
+2026-01-13 17:52:48 - ERROR - ✗ Amazon Download fehlgeschlagen: Amazon Download fehlgeschlagen: Traceback (most recent call last):
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/v7/files/amazon_invoice_downloader.py", line 294, in <module>
+    main()
+    ~~~~^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/v7/files/amazon_invoice_downloader.py", line 291, in main
+    downloader.download_all(year=args.year)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/v7/files/amazon_invoice_downloader.py", line 201, in download_all
+    self.setup_driver()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/v7/files/amazon_invoice_downloader.py", line 71, in setup_driver
+    self.driver = webdriver.Chrome(service=service, options=options)
+                  ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/chrome/webdriver.py", line 46, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        browser_name=DesiredCapabilities.CHROME["browserName"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/chromium/webdriver.py", line 67, in __init__
+    super().__init__(command_executor=executor, options=options)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 257, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 352, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 432, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/brave is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Stacktrace:
+#0 0x55ee598db4e3 <unknown>
+#1 0x55ee5960ac76 <unknown>
+#2 0x55ee59633d78 <unknown>
+#3 0x55ee59630029 <unknown>
+#4 0x55ee5966eccc <unknown>
+#5 0x55ee5966e47f <unknown>
+#6 0x55ee59665de3 <unknown>
+#7 0x55ee5963b2dd <unknown>
+#8 0x55ee5963c34e <unknown>
+#9 0x55ee5989b3e4 <unknown>
+#10 0x55ee5989f3d7 <unknown>
+#11 0x55ee598a9b20 <unknown>
+#12 0x55ee598a0023 <unknown>
+#13 0x55ee5986e1aa <unknown>
+#14 0x55ee598c46b8 <unknown>
+#15 0x55ee598c4847 <unknown>
+#16 0x55ee598d4243 <unknown>
+#17 0x7fa7552a87f6 <unknown>
+
+
+2026-01-13 17:52:48 - INFO - ============================================================
+2026-01-13 17:52:48 - INFO - SCHRITT 2: PDFs verarbeiten
+2026-01-13 17:52:48 - INFO - ============================================================
+2026-01-13 17:52:48 - INFO - Keine neuen Amazon-Rechnungen gefunden
+2026-01-13 17:52:48 - WARNING - Keine neuen PDFs gefunden
+2026-01-13 17:52:48 - INFO - ============================================================
+2026-01-13 17:52:48 - INFO - SCHRITT 3: Aufräumen
+2026-01-13 17:52:48 - INFO - ============================================================
+2026-01-13 17:52:48 - INFO - ✓ Aufräumen abgeschlossen
+2026-01-13 17:52:48 - INFO - ============================================================
+2026-01-13 17:52:48 - INFO - SCHRITT 4: Benachrichtigung
+2026-01-13 17:52:48 - INFO - ============================================================
+2026-01-13 17:52:48 - INFO - Benachrichtigungen deaktiviert
+2026-01-13 17:52:48 - INFO - ✓ Benachrichtigung gesendet
+2026-01-13 17:52:48 - INFO - ============================================================
+2026-01-13 17:52:48 - INFO - ZUSAMMENFASSUNG
+2026-01-13 17:52:48 - INFO - ============================================================
+2026-01-13 17:52:48 - INFO - Amazon Downloads:     0
+2026-01-13 17:52:48 - INFO - PDFs verarbeitet:     0
+2026-01-13 17:52:48 - INFO - Beträge erkannt:      0
+2026-01-13 17:52:48 - INFO - Ohne Betrag:          0
+2026-01-13 17:52:48 - INFO - Fehler:               1
+2026-01-13 17:52:48 - INFO - Dauer:                13s
+2026-01-13 17:52:48 - INFO - ============================================================
+2026-01-13 17:52:48 - INFO - ✓ Steuer-Automatisierung abgeschlossen
+2026-01-13 17:57:00 - INFO - Steuer-Automatisierung initialisiert
+2026-01-13 17:57:00 - INFO - 🚀 Steuer-Automatisierung gestartet
+2026-01-13 17:57:00 - INFO - ============================================================
+2026-01-13 17:57:00 - INFO - SCHRITT 1: Amazon Rechnungen herunterladen
+2026-01-13 17:57:00 - INFO - ============================================================
+2026-01-13 17:57:00 - INFO - Starte Amazon Download...
+2026-01-13 17:57:10 - ERROR - Amazon Download fehlgeschlagen: Traceback (most recent call last):
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/v7/files/amazon_invoice_downloader.py", line 295, in <module>
+    main()
+    ~~~~^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/v7/files/amazon_invoice_downloader.py", line 292, in main
+    downloader.download_all(year=args.year)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/v7/files/amazon_invoice_downloader.py", line 202, in download_all
+    self.setup_driver()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/v7/files/amazon_invoice_downloader.py", line 72, in setup_driver
+    self.driver = webdriver.Chrome(service=service, options=options)
+                  ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/chrome/webdriver.py", line 46, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        browser_name=DesiredCapabilities.CHROME["browserName"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/chromium/webdriver.py", line 67, in __init__
+    super().__init__(command_executor=executor, options=options)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 257, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 352, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 432, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/chromium is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Stacktrace:
+#0 0x557e14c5f4e3 <unknown>
+#1 0x557e1498ec76 <unknown>
+#2 0x557e149b7d78 <unknown>
+#3 0x557e149b4029 <unknown>
+#4 0x557e149f2ccc <unknown>
+#5 0x557e149f247f <unknown>
+#6 0x557e149e9de3 <unknown>
+#7 0x557e149bf2dd <unknown>
+#8 0x557e149c034e <unknown>
+#9 0x557e14c1f3e4 <unknown>
+#10 0x557e14c233d7 <unknown>
+#11 0x557e14c2db20 <unknown>
+#12 0x557e14c24023 <unknown>
+#13 0x557e14bf21aa <unknown>
+#14 0x557e14c486b8 <unknown>
+#15 0x557e14c48847 <unknown>
+#16 0x557e14c58243 <unknown>
+#17 0x7fd6dc4a87f6 <unknown>
+
+
+2026-01-13 17:57:10 - ERROR - Amazon Download Fehler: Amazon Download fehlgeschlagen: Traceback (most recent call last):
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/v7/files/amazon_invoice_downloader.py", line 295, in <module>
+    main()
+    ~~~~^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/v7/files/amazon_invoice_downloader.py", line 292, in main
+    downloader.download_all(year=args.year)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/v7/files/amazon_invoice_downloader.py", line 202, in download_all
+    self.setup_driver()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/v7/files/amazon_invoice_downloader.py", line 72, in setup_driver
+    self.driver = webdriver.Chrome(service=service, options=options)
+                  ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/chrome/webdriver.py", line 46, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        browser_name=DesiredCapabilities.CHROME["browserName"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/chromium/webdriver.py", line 67, in __init__
+    super().__init__(command_executor=executor, options=options)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 257, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 352, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 432, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/chromium is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Stacktrace:
+#0 0x557e14c5f4e3 <unknown>
+#1 0x557e1498ec76 <unknown>
+#2 0x557e149b7d78 <unknown>
+#3 0x557e149b4029 <unknown>
+#4 0x557e149f2ccc <unknown>
+#5 0x557e149f247f <unknown>
+#6 0x557e149e9de3 <unknown>
+#7 0x557e149bf2dd <unknown>
+#8 0x557e149c034e <unknown>
+#9 0x557e14c1f3e4 <unknown>
+#10 0x557e14c233d7 <unknown>
+#11 0x557e14c2db20 <unknown>
+#12 0x557e14c24023 <unknown>
+#13 0x557e14bf21aa <unknown>
+#14 0x557e14c486b8 <unknown>
+#15 0x557e14c48847 <unknown>
+#16 0x557e14c58243 <unknown>
+#17 0x7fd6dc4a87f6 <unknown>
+
+
+2026-01-13 17:57:10 - ERROR - ✗ Amazon Download fehlgeschlagen: Amazon Download fehlgeschlagen: Traceback (most recent call last):
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/v7/files/amazon_invoice_downloader.py", line 295, in <module>
+    main()
+    ~~~~^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/v7/files/amazon_invoice_downloader.py", line 292, in main
+    downloader.download_all(year=args.year)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/v7/files/amazon_invoice_downloader.py", line 202, in download_all
+    self.setup_driver()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/v7/files/amazon_invoice_downloader.py", line 72, in setup_driver
+    self.driver = webdriver.Chrome(service=service, options=options)
+                  ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/chrome/webdriver.py", line 46, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        browser_name=DesiredCapabilities.CHROME["browserName"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/chromium/webdriver.py", line 67, in __init__
+    super().__init__(command_executor=executor, options=options)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 257, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 352, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 432, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/y/Dokumente/vsCode/API - Amazon Selenium/venv/lib/python3.13/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/chromium is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Stacktrace:
+#0 0x557e14c5f4e3 <unknown>
+#1 0x557e1498ec76 <unknown>
+#2 0x557e149b7d78 <unknown>
+#3 0x557e149b4029 <unknown>
+#4 0x557e149f2ccc <unknown>
+#5 0x557e149f247f <unknown>
+#6 0x557e149e9de3 <unknown>
+#7 0x557e149bf2dd <unknown>
+#8 0x557e149c034e <unknown>
+#9 0x557e14c1f3e4 <unknown>
+#10 0x557e14c233d7 <unknown>
+#11 0x557e14c2db20 <unknown>
+#12 0x557e14c24023 <unknown>
+#13 0x557e14bf21aa <unknown>
+#14 0x557e14c486b8 <unknown>
+#15 0x557e14c48847 <unknown>
+#16 0x557e14c58243 <unknown>
+#17 0x7fd6dc4a87f6 <unknown>
+
+
+2026-01-13 17:57:10 - INFO - ============================================================
+2026-01-13 17:57:10 - INFO - SCHRITT 2: PDFs verarbeiten
+2026-01-13 17:57:10 - INFO - ============================================================
+2026-01-13 17:57:10 - INFO - Keine neuen Amazon-Rechnungen gefunden
+2026-01-13 17:57:10 - WARNING - Keine neuen PDFs gefunden
+2026-01-13 17:57:10 - INFO - ============================================================
+2026-01-13 17:57:10 - INFO - SCHRITT 3: Aufräumen
+2026-01-13 17:57:10 - INFO - ============================================================
+2026-01-13 17:57:10 - INFO - ✓ Aufräumen abgeschlossen
+2026-01-13 17:57:10 - INFO - ============================================================
+2026-01-13 17:57:10 - INFO - SCHRITT 4: Benachrichtigung
+2026-01-13 17:57:10 - INFO - ============================================================
+2026-01-13 17:57:10 - INFO - Benachrichtigungen deaktiviert
+2026-01-13 17:57:10 - INFO - ✓ Benachrichtigung gesendet
+2026-01-13 17:57:10 - INFO - ============================================================
+2026-01-13 17:57:10 - INFO - ZUSAMMENFASSUNG
+2026-01-13 17:57:10 - INFO - ============================================================
+2026-01-13 17:57:10 - INFO - Amazon Downloads:     0
+2026-01-13 17:57:10 - INFO - PDFs verarbeitet:     0
+2026-01-13 17:57:10 - INFO - Beträge erkannt:      0
+2026-01-13 17:57:10 - INFO - Ohne Betrag:          0
+2026-01-13 17:57:10 - INFO - Fehler:               1
+2026-01-13 17:57:10 - INFO - Dauer:                9s
+2026-01-13 17:57:10 - INFO - ============================================================
+2026-01-13 17:57:10 - INFO - ✓ Steuer-Automatisierung abgeschlossen
