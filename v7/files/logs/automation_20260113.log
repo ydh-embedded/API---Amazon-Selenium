@@ -1,0 +1,32 @@
+2026-01-13 17:20:33 - INFO - Steuer-Automatisierung initialisiert
+2026-01-13 17:20:33 - INFO - 🚀 Steuer-Automatisierung gestartet
+2026-01-13 17:20:33 - INFO - ============================================================
+2026-01-13 17:20:33 - INFO - SCHRITT 1: Amazon Rechnungen herunterladen
+2026-01-13 17:20:33 - INFO - ============================================================
+2026-01-13 17:20:33 - ERROR - ✗ Amazon Download fehlgeschlagen: Amazon Config nicht gefunden: amazon_config.yaml
+Erstelle die Datei unter amazon_config.yaml
+2026-01-13 17:20:33 - INFO - ============================================================
+2026-01-13 17:20:33 - INFO - SCHRITT 2: PDFs verarbeiten
+2026-01-13 17:20:33 - INFO - ============================================================
+2026-01-13 17:20:33 - INFO - Keine neuen Amazon-Rechnungen gefunden
+2026-01-13 17:20:33 - WARNING - Keine neuen PDFs gefunden
+2026-01-13 17:20:33 - INFO - ============================================================
+2026-01-13 17:20:33 - INFO - SCHRITT 3: Aufräumen
+2026-01-13 17:20:33 - INFO - ============================================================
+2026-01-13 17:20:33 - INFO - ✓ Aufräumen abgeschlossen
+2026-01-13 17:20:33 - INFO - ============================================================
+2026-01-13 17:20:33 - INFO - SCHRITT 4: Benachrichtigung
+2026-01-13 17:20:33 - INFO - ============================================================
+2026-01-13 17:20:33 - INFO - Benachrichtigungen deaktiviert
+2026-01-13 17:20:33 - INFO - ✓ Benachrichtigung gesendet
+2026-01-13 17:20:33 - INFO - ============================================================
+2026-01-13 17:20:33 - INFO - ZUSAMMENFASSUNG
+2026-01-13 17:20:33 - INFO - ============================================================
+2026-01-13 17:20:33 - INFO - Amazon Downloads:     0
+2026-01-13 17:20:33 - INFO - PDFs verarbeitet:     0
+2026-01-13 17:20:33 - INFO - Beträge erkannt:      0
+2026-01-13 17:20:33 - INFO - Ohne Betrag:          0
+2026-01-13 17:20:33 - INFO - Fehler:               1
+2026-01-13 17:20:33 - INFO - Dauer:                0s
+2026-01-13 17:20:33 - INFO - ============================================================
+2026-01-13 17:20:33 - INFO - ✓ Steuer-Automatisierung abgeschlossen
