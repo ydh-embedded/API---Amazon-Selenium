@@ -1,20 +1,42 @@
-# Amazon Invoice Downloader Konfiguration
+# Amazon Invoice Downloader - Konfiguration
+# Für: Brave Browser oder Chrome/Chromium
 
 browser:
-  # Pfad zu Brave Browser
-  brave_path: /usr/bin/brave  # oder /snap/bin/brave
+  # Browser-Auswahl und Pfad
+  # Für Brave:
+  brave_path: /usr/bin/brave
   
-  # Brave Profil verwenden (mit gespeicherten Login-Daten)
-  use_profile: false
+  
+  # Für Chrome (Alternative):
+  # brave_path: /usr/bin/google-chrome
+  # oder
+  # brave_path: /usr/bin/chromium
+  
+  # Brave Profil mit gespeicherten Login-Daten verwenden
+  # Falls true: Nutzt dein bestehendes Brave-Profil (mit gespeicherten Passwörtern)
+  # Falls false: Neues Profil (du musst dich manuell anmelden)
+  use_profile: true
+  
+  # Pfad zum Brave-Profil (nur wenn use_profile: true)
   profile_path: ~/.config/BraveSoftware/Brave-Browser
   profile_name: Default
   
-  # Headless Mode (Browser im Hintergrund)
+  # Headless Mode (Browser läuft im Hintergrund, unsichtbar)
+  # Falls true: Schneller, aber du siehst nichts
+  # Falls false: Browser ist sichtbar (zum Debuggen)
   headless: false
-
+  disable_tracking_protection: true
 download:
-  # Wo sollen die Rechnungen gespeichert werden
+  # Wo sollen die Rechnungen heruntergeladen werden
+  # Relative Pfade sind besser (portabel)
   directory: ./amazon_downloads
   
   # Verzögerung zwischen Downloads (Sekunden)
-  delay_seconds: 2
+  # Zu schnell = Amazon blockiert dich
+  # 2-3 Sekunden ist sicher
+  delay_seconds: 3
+
+# Logging (optional)
+logging:
+  level: INFO  # DEBUG, INFO, WARNING, ERROR
+  verbose: false

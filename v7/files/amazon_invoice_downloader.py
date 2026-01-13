@@ -63,8 +63,16 @@ class AmazonInvoiceDownloader:
             options.add_argument('--headless=new')
         
         # Chrome Service (nutzt system chromedriver)
-        self.driver = webdriver.Chrome(options=options)
-        self.driver.set_page_load_timeout(30)
+        # self.driver = webdriver.Chrome(options=options) alte Variante
+        from selenium.webdriver.chrome.service import Service
+        from webdriver_manager.chrome import ChromeDriverManager
+
+        service = Service(ChromeDriverManager().install())
+        self.driver = webdriver.Chrome(service=service, options=options)
+        # self.driver.set_page_load_timeout(30)
+        # ✅ BESSER (mit Timeout)
+        self.driver.set_page_load_timeout(60)       # Seite lädt max 30 Sekunden
+        self.driver.implicitly_wait(30)             # Elemente suchen max 10 Sekunden
         
         print("✓ Browser gestartet")
     
